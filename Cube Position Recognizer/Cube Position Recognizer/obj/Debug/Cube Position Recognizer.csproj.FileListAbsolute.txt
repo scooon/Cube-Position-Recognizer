@@ -1,0 +1,28 @@
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Cube Position Recognizer.exe.config
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Cube Position Recognizer.exe
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Cube Position Recognizer.pdb
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Imaging.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Math.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Imaging.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Math.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube Position Recognizer.csprojAssemblyReference.cache
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube_Position_Recognizer.Form1.resources
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube_Position_Recognizer.Properties.Resources.resources
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube Position Recognizer.csproj.GenerateResource.cache
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube Position Recognizer.csproj.CoreCompileInputs.cache
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube Position Recognizer.csproj.CopyComplete
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube Position Recognizer.exe
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube Position Recognizer.pdb
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.dll.config
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Imaging.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Math.Core.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Math.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Statistics.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Imaging.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Math.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Math.Core.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Statistics.xml
