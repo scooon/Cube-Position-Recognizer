@@ -1,12 +1,6 @@
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Cube Position Recognizer.exe.config
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Cube Position Recognizer.exe
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Cube Position Recognizer.pdb
-G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.dll
-G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Imaging.dll
-G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Math.dll
-G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.xml
-G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Imaging.xml
-G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\AForge.Math.xml
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube Position Recognizer.csprojAssemblyReference.cache
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube_Position_Recognizer.Form1.resources
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\obj\Debug\Cube_Position_Recognizer.Properties.Resources.resources
@@ -26,3 +20,39 @@ G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Math.xml
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Math.Core.xml
 G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Accord.Statistics.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Emgu.CV.Platform.NetFramework.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Emgu.CV.Platform.NetStandard.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Emgu.CV.Platform.NetFramework.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\Emgu.CV.Platform.NetStandard.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\concrt140.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\cvextern.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\msvcp140.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\msvcp140_1.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\msvcp140_2.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\msvcp140_codecvt_ids.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\opencv_videoio_ffmpeg430_64.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\vcruntime140.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x64\vcruntime140_1.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\concrt140.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\cvextern.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\msvcp140.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\msvcp140_1.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\msvcp140_2.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\msvcp140_codecvt_ids.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\opencv_videoio_ffmpeg430.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\x86\vcruntime140.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\ZedGraph.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\ZedGraph.xml
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\de\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\es\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\fr\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\hu\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\it\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\ja\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\pt\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\ru\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\sk\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\sv\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\tr\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\zh-cn\ZedGraph.resources.dll
+G:\Visual Projekty\Studia\CubeRecognition\Cube-Position-Recognizer\Cube Position Recognizer\Cube Position Recognizer\bin\Debug\zh-tw\ZedGraph.resources.dll
