@@ -47,16 +47,18 @@
             this.otwórzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.binaryzujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.znajdźWierzchołkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zapiszJakoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mAGICBUTTONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RthresholdValue = new System.Windows.Forms.TextBox();
             this.Rthreshold = new System.Windows.Forms.Label();
             this.Gthreshold = new System.Windows.Forms.Label();
             this.GthresholdValue = new System.Windows.Forms.TextBox();
             this.Bthreshold = new System.Windows.Forms.Label();
             this.BthresholdValue = new System.Windows.Forms.TextBox();
-            this.zapiszJakoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mAGICBUTTONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Kthreshold = new System.Windows.Forms.Label();
             this.kThresholdValue = new System.Windows.Forms.TextBox();
+            this.DistanceListView = new System.Windows.Forms.ListView();
+            this.OdleglosciLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Preview_1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,9 +76,9 @@
             // Preview_1
             // 
             this.Preview_1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Preview_1.Location = new System.Drawing.Point(335, 57);
+            this.Preview_1.Location = new System.Drawing.Point(142, 57);
             this.Preview_1.Name = "Preview_1";
-            this.Preview_1.Size = new System.Drawing.Size(374, 341);
+            this.Preview_1.Size = new System.Drawing.Size(567, 341);
             this.Preview_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Preview_1.TabIndex = 1;
             this.Preview_1.TabStop = false;
@@ -153,7 +155,7 @@
             // cornersLabel
             // 
             this.cornersLabel.AutoSize = true;
-            this.cornersLabel.Location = new System.Drawing.Point(12, 139);
+            this.cornersLabel.Location = new System.Drawing.Point(23, 425);
             this.cornersLabel.Name = "cornersLabel";
             this.cornersLabel.Size = new System.Drawing.Size(67, 13);
             this.cornersLabel.TabIndex = 11;
@@ -162,7 +164,7 @@
             // CornerListView
             // 
             this.CornerListView.HideSelection = false;
-            this.CornerListView.Location = new System.Drawing.Point(12, 154);
+            this.CornerListView.Location = new System.Drawing.Point(23, 440);
             this.CornerListView.Name = "CornerListView";
             this.CornerListView.Size = new System.Drawing.Size(308, 206);
             this.CornerListView.TabIndex = 12;
@@ -211,23 +213,37 @@
             // otwórzToolStripMenuItem
             // 
             this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
-            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.otwórzToolStripMenuItem.Text = "Otwórz";
             this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.otwórzToolStripMenuItem_Click);
             // 
             // binaryzujToolStripMenuItem
             // 
             this.binaryzujToolStripMenuItem.Name = "binaryzujToolStripMenuItem";
-            this.binaryzujToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.binaryzujToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.binaryzujToolStripMenuItem.Text = "Binaryzuj";
             this.binaryzujToolStripMenuItem.Click += new System.EventHandler(this.binaryzujToolStripMenuItem_Click);
             // 
             // znajdźWierzchołkiToolStripMenuItem
             // 
             this.znajdźWierzchołkiToolStripMenuItem.Name = "znajdźWierzchołkiToolStripMenuItem";
-            this.znajdźWierzchołkiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.znajdźWierzchołkiToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.znajdźWierzchołkiToolStripMenuItem.Text = "Znajdź wierzchołki";
             this.znajdźWierzchołkiToolStripMenuItem.Click += new System.EventHandler(this.znajdźWierzchołkiToolStripMenuItem_Click);
+            // 
+            // zapiszJakoToolStripMenuItem
+            // 
+            this.zapiszJakoToolStripMenuItem.Name = "zapiszJakoToolStripMenuItem";
+            this.zapiszJakoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.zapiszJakoToolStripMenuItem.Text = "Zapisz jako";
+            this.zapiszJakoToolStripMenuItem.Click += new System.EventHandler(this.zapiszJakoToolStripMenuItem_Click);
+            // 
+            // mAGICBUTTONToolStripMenuItem
+            // 
+            this.mAGICBUTTONToolStripMenuItem.Name = "mAGICBUTTONToolStripMenuItem";
+            this.mAGICBUTTONToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.mAGICBUTTONToolStripMenuItem.Text = "MAGIC BUTTON";
+            this.mAGICBUTTONToolStripMenuItem.Click += new System.EventHandler(this.mAGICBUTTONToolStripMenuItem_Click);
             // 
             // RthresholdValue
             // 
@@ -280,24 +296,10 @@
             this.BthresholdValue.TabIndex = 20;
             this.BthresholdValue.Text = "255";
             // 
-            // zapiszJakoToolStripMenuItem
-            // 
-            this.zapiszJakoToolStripMenuItem.Name = "zapiszJakoToolStripMenuItem";
-            this.zapiszJakoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.zapiszJakoToolStripMenuItem.Text = "Zapisz jako";
-            this.zapiszJakoToolStripMenuItem.Click += new System.EventHandler(this.zapiszJakoToolStripMenuItem_Click);
-            // 
-            // mAGICBUTTONToolStripMenuItem
-            // 
-            this.mAGICBUTTONToolStripMenuItem.Name = "mAGICBUTTONToolStripMenuItem";
-            this.mAGICBUTTONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mAGICBUTTONToolStripMenuItem.Text = "MAGIC BUTTON";
-            this.mAGICBUTTONToolStripMenuItem.Click += new System.EventHandler(this.mAGICBUTTONToolStripMenuItem_Click);
-            // 
             // Kthreshold
             // 
             this.Kthreshold.AutoSize = true;
-            this.Kthreshold.Location = new System.Drawing.Point(483, 409);
+            this.Kthreshold.Location = new System.Drawing.Point(769, 457);
             this.Kthreshold.Name = "Kthreshold";
             this.Kthreshold.Size = new System.Drawing.Size(64, 13);
             this.Kthreshold.TabIndex = 23;
@@ -305,17 +307,38 @@
             // 
             // kThresholdValue
             // 
-            this.kThresholdValue.Location = new System.Drawing.Point(486, 425);
+            this.kThresholdValue.Location = new System.Drawing.Point(772, 473);
             this.kThresholdValue.Name = "kThresholdValue";
             this.kThresholdValue.Size = new System.Drawing.Size(100, 20);
             this.kThresholdValue.TabIndex = 22;
             this.kThresholdValue.Text = "70";
             // 
+            // DistanceListView
+            // 
+            this.DistanceListView.HideSelection = false;
+            this.DistanceListView.Location = new System.Drawing.Point(371, 440);
+            this.DistanceListView.Name = "DistanceListView";
+            this.DistanceListView.Size = new System.Drawing.Size(308, 206);
+            this.DistanceListView.TabIndex = 24;
+            this.DistanceListView.UseCompatibleStateImageBehavior = false;
+            this.DistanceListView.View = System.Windows.Forms.View.List;
+            // 
+            // OdleglosciLabel
+            // 
+            this.OdleglosciLabel.AutoSize = true;
+            this.OdleglosciLabel.Location = new System.Drawing.Point(368, 424);
+            this.OdleglosciLabel.Name = "OdleglosciLabel";
+            this.OdleglosciLabel.Size = new System.Drawing.Size(61, 13);
+            this.OdleglosciLabel.TabIndex = 25;
+            this.OdleglosciLabel.Text = "Odległości:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 470);
+            this.ClientSize = new System.Drawing.Size(947, 670);
+            this.Controls.Add(this.OdleglosciLabel);
+            this.Controls.Add(this.DistanceListView);
             this.Controls.Add(this.Kthreshold);
             this.Controls.Add(this.kThresholdValue);
             this.Controls.Add(this.Bthreshold);
@@ -381,6 +404,8 @@
         private System.Windows.Forms.ToolStripMenuItem mAGICBUTTONToolStripMenuItem;
         private System.Windows.Forms.Label Kthreshold;
         private System.Windows.Forms.TextBox kThresholdValue;
+        private System.Windows.Forms.ListView DistanceListView;
+        private System.Windows.Forms.Label OdleglosciLabel;
     }
 }
 

@@ -19,7 +19,7 @@ namespace Cube_Position_Recognizer
     {
         Image<Bgr, byte> imgInput;
         Image<Gray, byte> imgGray;
-        Image<Bgr, byte> imgBinarize;
+        Image<Bgr, byte> imgRaw;
 
         Bitmap afterBinarization;
         Bitmap rgbd;
@@ -237,6 +237,8 @@ namespace Cube_Position_Recognizer
                 imgInput = new Image<Bgr, byte>(ofd.FileName);
                 imgGray = new Image<Gray, Byte>(ofd.FileName);
 
+                imgRaw = new Image<Bgr, byte>(ofd.FileName);
+
                 string rgbdPath = ofd.FileName.Replace("RGB", "Depth");
 
                 rgbd = Accord.Imaging.Image.FromFile(rgbdPath);
@@ -303,6 +305,7 @@ namespace Cube_Position_Recognizer
             List<Accord.IntPoint> actual = target.ProcessImage(image);
 
             int PointNum = 0;
+            int DistNum = 0;
 
             for (int i = 0, n = actual.Count; i < n; i++)
             {
@@ -316,7 +319,7 @@ namespace Cube_Position_Recognizer
                     // Listowanie punktów wierzchołków
                     Console.WriteLine("Punkt: [" + actual[i].X + " , " + actual[i].Y + " , " + calculateDepth + "]");
 
-                    CornerListView.Items.Add("Punkt " + PointNum + " : [" + actual[i].X + " , " + actual[i].Y + " , " + calculateDepth + "]");
+                    CornerListView.Items.Add("Punkt " + (DistNum + 1) + " : [" + actual[i].X + " , " + actual[i].Y + " , " + calculateDepth + "]");
 
                     try
                     {
@@ -332,6 +335,56 @@ namespace Cube_Position_Recognizer
                     catch
                     {
                         Console.WriteLine("Piksel za burtą!");
+                    }
+
+
+                    try
+                    {
+                        // Draw line using Point structure
+                        Pen greenPen = new Pen(Color.Green, 3);
+                        Point p1 = new Point(actual[i].X, actual[i].Y);
+                        for (int it = 0, nt = actual.Count; it < nt; it++)
+                        {
+                            if ((Math.Abs(actual[i].X - actual[it].X) < 20) || (Math.Abs(actual[i].Y - actual[it].Y) < 20))
+                            {
+                                Point p2 = new Point(actual[it].X, actual[it].Y);
+                                
+                                float calculateDepth2 = (rgbd.GetPixel(actual[it].X, actual[it].Y).R + rgbd.GetPixel(actual[it].X, actual[it].Y).G + rgbd.GetPixel(actual[it].X, actual[it].Y).B) / 3;
+
+                                double distance = Math.Sqrt((((long)Math.Pow((actual[it].X - actual[i].X), 2)) + ((long)Math.Pow((actual[it].Y - actual[i].Y), 2)) + ((long)Math.Pow((calculateDepth - calculateDepth2), 2))));
+
+                                if ((distance > 130) && (distance < 180))
+                                {
+                                    DistanceListView.Items.Add("Odcinek " + PointNum + " : [" + actual[i].X + " , " + actual[i].Y + " | " + actual[it].X + " , " + actual[it].Y +  "] = " + distance);
+                                    
+                                    
+                                    Console.WriteLine("Distance: " + distance);
+
+                                    for (int w = 0; w <= 10; w++)
+                                    {
+                                        for (int h = 0; h <= 10; h++)
+                                        {
+                                            image.SetPixel(actual[i].X + (w - 5), actual[i].Y + (h - 5), Color.Blue);
+                                        }
+                                    }
+
+                                    using (var graphics = Graphics.FromImage(image))
+                                    {
+                                        graphics.DrawLine(greenPen, p1, p2);
+
+                                        Bitmap cubeLines = new Bitmap(image.Width, image.Height, graphics);
+                                        Preview_1.Image = cubeLines;
+                                    }
+
+                                }
+
+                            }
+
+                        }
+                    }
+                    catch
+                    {
+
                     }
 
                 }
