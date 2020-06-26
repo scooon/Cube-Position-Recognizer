@@ -234,24 +234,12 @@ namespace Cube_Position_Recognizer
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                imgInput = new Image<Bgr, byte>(ofd.FileName);
-                imgGray = new Image<Gray, Byte>(ofd.FileName);
-
-                imgRaw = new Image<Bgr, byte>(ofd.FileName);
-
-                string rgbdPath = ofd.FileName.Replace("RGB", "Depth");
-
-                rgbd = Accord.Imaging.Image.FromFile(rgbdPath);
-
-                Preview_1.Image = imgInput.ToBitmap<Bgr, byte>();
-
-
-
+                FindCube(ofd);
 
 
             }
 
-
+            /*
             Preview_1.Image = imgGray.ToBitmap(); //Display if you want
             imgGray = imgGray.ThresholdBinary(new Gray(float.Parse(kThresholdValue.Text)), new Gray(255));
             //Image<Gray,Byte> Binary_Image = img.ThresholdBinary(new Gray(threshold_value),
@@ -394,6 +382,151 @@ namespace Cube_Position_Recognizer
 
             Preview_1.Image = image;
 
+            */
+
+
+        
+
+        }
+
+        private void FindCube(OpenFileDialog ofd)
+        {
+
+
+            // Odczyt obrazu
+            Bitmap image = Accord.Imaging.Image.FromFile(ofd.FileName);
+
+            // Odczyt głębi
+            string rgbdPath = ofd.FileName.Replace("RGB", "Depth");
+
+            rgbd = Accord.Imaging.Image.FromFile(rgbdPath);
+
+            // Separowanie obiektu
+
+            // Filtr HSL
+            HSLFiltering filter = new HSLFiltering();
+
+            // Parametry filtra
+            // TODO: Dorobić sterowanie w interfejsie
+
+            filter.Hue = new IntRange(58, 200);
+            filter.Saturation = new Accord.Range(0.1f, 1);
+            filter.Luminance = new Accord.Range(0.05f, 1);
+            
+            filter.ApplyInPlace(image);
+
+            Preview_1.Image = image;
+
+
+
+            // Czyszczenie listy wierzchołków
+
+            CornerListView.Items.Clear();
+
+            
+
+            float kinput = float.Parse(k_Input.Text);
+            float thresholdinput = float.Parse(Threshold_input.Text);
+            float sigmainput = float.Parse(sigma_Input.Text);
+
+
+            // Rozpoznawanie wierzchołków Harrisa (Lepiej się sprawdziło niż np. Suzan)
+            HarrisCornersDetector target = new HarrisCornersDetector(kinput, thresholdinput, sigmainput);
+            target.Suppression = (int)float.Parse(suppressionTarget.Text);
+
+            // Wyznaczenie wierzchołków do listy punktów
+            List<Accord.IntPoint> actual = target.ProcessImage(image);
+
+            int PointNum = 0;
+            int DistNum = 0;
+
+            for (int i = 0, n = actual.Count; i < n; i++)
+            {
+
+                float calculateDepth = (rgbd.GetPixel(actual[i].X, actual[i].Y).R + rgbd.GetPixel(actual[i].X, actual[i].Y).G + rgbd.GetPixel(actual[i].X, actual[i].Y).B) / 3;
+
+
+                if ((actual[i].X > 400) && (actual[i].X < 900))
+                {
+                    PointNum++;
+
+                    // Listowanie punktów wierzchołków
+                    Console.WriteLine("Punkt: [" + actual[i].X + " , " + actual[i].Y + " , " + calculateDepth + "]");
+
+                    CornerListView.Items.Add("Punkt " + (DistNum + 1) + " : [" + actual[i].X + " , " + actual[i].Y + " , " + calculateDepth + "]");
+
+                    try
+                    {
+                        // Generowanie białych kwadratów w miejscu wierzchołków
+                        for (int w = 0; w <= 10; w++)
+                        {
+                            for (int h = 0; h <= 10; h++)
+                            {
+                                image.SetPixel(actual[i].X + (w - 5), actual[i].Y + (h - 5), Color.Red);
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Piksel za burtą!");
+                    }
+
+
+                    try
+                    {
+                        // Draw line using Point structure
+                        Pen pinkPen = new Pen(Color.Pink, 3);
+                        Point p1 = new Point(actual[i].X, actual[i].Y);
+                        for (int it = 0, nt = actual.Count; it < nt; it++)
+                        {
+                            if ((Math.Abs(actual[i].X - actual[it].X) < 20) || (Math.Abs(actual[i].Y - actual[it].Y) < 20))
+                            {
+                                Point p2 = new Point(actual[it].X, actual[it].Y);
+
+                                float calculateDepth2 = (rgbd.GetPixel(actual[it].X, actual[it].Y).R + rgbd.GetPixel(actual[it].X, actual[it].Y).G + rgbd.GetPixel(actual[it].X, actual[it].Y).B) / 3;
+
+                                double distance = (Math.Sqrt((((long)Math.Pow((actual[it].X - actual[i].X), 2))/1280) + (((long)Math.Pow((actual[it].Y - actual[i].Y), 2))/720) + (((long)Math.Pow((calculateDepth - calculateDepth2), 2)))/255));
+
+                                if ((distance > 0) && (distance < 100))
+                                {
+                                    DistanceListView.Items.Add("Odcinek " + PointNum + " : [" + actual[i].X + " , " + actual[i].Y + " | " + actual[it].X + " , " + actual[it].Y + "] = " + distance);
+
+
+                                    Console.WriteLine("Distance: " + distance);
+
+                                    for (int w = 0; w <= 10; w++)
+                                    {
+                                        for (int h = 0; h <= 10; h++)
+                                        {
+                                            image.SetPixel(actual[i].X + (w - 5), actual[i].Y + (h - 5), Color.Red);
+                                        }
+                                    }
+
+                                    using (var graphics = Graphics.FromImage(image))
+                                    {
+                                        graphics.DrawLine(pinkPen, p1, p2);
+
+                                        Bitmap cubeLines = new Bitmap(image.Width, image.Height, graphics);
+                                        Preview_1.Image = cubeLines;
+                                    }
+
+                                }
+
+                            }
+
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+            }
+
+
+
+            Preview_1.Image = image;
         }
     }
 }

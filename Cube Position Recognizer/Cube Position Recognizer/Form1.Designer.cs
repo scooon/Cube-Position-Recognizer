@@ -97,7 +97,7 @@
             this.k_Input.Name = "k_Input";
             this.k_Input.Size = new System.Drawing.Size(100, 20);
             this.k_Input.TabIndex = 3;
-            this.k_Input.Text = "0,2";
+            this.k_Input.Text = "0,09";
             // 
             // sigma_Input
             // 
@@ -105,7 +105,7 @@
             this.sigma_Input.Name = "sigma_Input";
             this.sigma_Input.Size = new System.Drawing.Size(100, 20);
             this.sigma_Input.TabIndex = 4;
-            this.sigma_Input.Text = "1,4";
+            this.sigma_Input.Text = "2";
             // 
             // ThresholdLabel
             // 
